@@ -1,0 +1,25 @@
+* {
+    border: 1px dotted red;
+}
+th {
+    color: blue;
+}
+html body table tbody tr td.last {
+    color: green;
+}
+#header {
+    color: red;
+}
+td {
+    color: purple !important;
+}
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding-left:0;
+    padding: 5px 0;
+    background-color: blanchedalmond;
+}
+li {
+    display: inline;
+}
