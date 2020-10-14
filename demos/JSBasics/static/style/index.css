@@ -45,3 +45,12 @@
     background-color: grey;
     opacity: .5;
 }
+div > .test {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background-color: blue;
+}
+div#wrapper div:nth-last-of-type(2) {
+    background-color: purple;
+}

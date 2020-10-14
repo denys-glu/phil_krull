@@ -1,0 +1,23 @@
+Yellow Belt Exam
+
+- Validate the HTML code
+     - https://validator.w3.org/
+
+- over use of:
+    - div's
+    - id's or classes
+        - use parent/child relationship
+
+- naming convention for id's and classes
+
+- No inline styling or style tags <hr> or <br> <b>
+
+- Finish HTML
+
+- Matching the image as closely as possible
+
+- absolute path vs relative path for links - css, images, js files, etc
+    - Bad: absolute - uninque for OS
+        - /C://user_name/folder/folder
+    - Good: relative path - not uninque
+        - ./../folder/file
