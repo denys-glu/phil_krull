@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+            var count = 0;
+        $(document).ready(function(){
+            // use jQuery
+            $('button').click(function(){
+                // alert('button clicked');
+                $(this).after("<p>Hello</p>");
+                $(this).prop('disabled', true);
+                count++;
+                console.log('count', count);
+            })
+
+
+
+        })
+    </script>
+</head>
+<body>
+    <button>Click Me</button>
+    <button>Click Me</button>
+    <button>Click Me</button>
+    <button>Click Me</button>
+</body>
+</html>
