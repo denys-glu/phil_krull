@@ -8,7 +8,7 @@
 // ----------------------------------------------------------------------------------------------------------------
 // Create invertHash(assocArr) that converts a hash’s keys to values and values to corresponding keys.
 // Example: given {"name": "Zaphod"; "numHeads": 2}, return {"Zaphod": "name"; 2:
-// "numHeads"}. You will need to learn and use a JavaScript for ... in h ere!
+// "numHeads"}. You will need to learn and use a JavaScript for ... in here!
 
 // ReverseString
 // ----------------------------------------------------------------------------------------------------------------
