@@ -1,6 +1,6 @@
 // MostFrequentNumber
 // ------------------------------------------------------------------------
-// Given an array of interfers containing duplicates,return the majority element in the array if Present.
+// Given an array of integers containing duplicates,return the majority element in the array if Present.
 // Input = [2,8,7,2,2,5,2,3,1,2,2]
 // Output = 2
 
@@ -15,3 +15,17 @@
 // Step 2) 4 is even; divide by 2 and obtain 2. 
 // Step 3) 2 is even; divide by 2 and obtain 1. 
 // Step 4) 1 is odd; subtract 1 and obtain 0.
+
+
+var newArr = []
+
+newArr[4] = 1;
+console.log(newArr);
+console.log(newArr[1]);
+
+if (newArr[given[i]] == undefined) {
+    newArr[given[i]] = 1;
+} else {
+    newArr[given[i]]++;
+}
+
