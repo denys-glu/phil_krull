@@ -14,6 +14,14 @@
     {% else %}
         <h4 class="red">Goodbye {{ name_for_template }}</h4>
     {% endif %}
+    <a href="/name/Phil/1">Say Hi</a>
+    <form action="/process_form" method='post'>
+        <input type="text" name="user_name">
+        <br>
+        <button>Submit</button>
+    </form>
+    <a href="/start_over">Reset</a>
+
 </body>
 </html>
 
