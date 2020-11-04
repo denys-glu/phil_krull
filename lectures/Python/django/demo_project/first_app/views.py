@@ -3,7 +3,6 @@ from django.shortcuts import render, HttpResponse, redirect
 # Create your views here.
 def index(request):
     # type of HTTP method from client
-    print(request.status)
     print(request.method)
     print(request.GET)
     print(request.POST)
