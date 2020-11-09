@@ -8,8 +8,17 @@ class DojoManager(models.Manager):
         if len(post_data['name']) < 1:
             print('Name is required, in dojo manager')
             errors.append('Name is required!')
-
+        if len(self.filter(name=post_data['name'])) > 0:
+            # dojo name already exists
+            pass
         return errors
+
+    def update_validate(self, post_data):
+        dojo = self.filter(name=post_data['name'])
+        if len(dojo) > 0 and dojo['id'] != post_data['id']:
+            # error, name exist
+            pass
+
 
 class Dojo(models.Model):
     name = models.CharField(max_length=55)
