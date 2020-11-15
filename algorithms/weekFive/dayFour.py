@@ -2,7 +2,7 @@
 # ------------------------------------------------------------------------
 # When Queue’s tail or head approaches ‘size’, wrap around to [0] and continue. We cannot let tail and head meet – one can’t “lap” the other. Instead, enqueue(val) should fail: Queue is full. Ditto dequeue() if Queue is empty. Constructor requires a size argument. Starting there, let’s create a circular queue implementation!
 
-def CirQueue():
+class CirQueue():
     def __init__(self, cap):
         self.head = 0
         self.tail = 0
