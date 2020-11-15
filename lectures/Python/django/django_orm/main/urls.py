@@ -15,7 +15,9 @@ Including another URLconf
 """
 
 from django.urls import path, include
+from django.shortcuts import redirect
 
 urlpatterns = [
-    path('', include('first_app.urls')),
+    path('test/', include('first_app.urls')),
+    path('', lambda request: redirect('test/'))
 ]
