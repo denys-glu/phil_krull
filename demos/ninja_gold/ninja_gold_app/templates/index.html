@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container py-5">
+        <h2>Your Gold: <span class="border border-dark py-1 px-5 ml-4">{{ request.session.total_gold }}</span></h2>
+        <div class="row mt-4 mb-2 no-gutters">
+            <div class="col-sm mr-1 border border-dark text-center">
+                <form action="/process/farm" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="building" value="farm">
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Farm</label>
+                        <p>(earns 10-20 golds)</p>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Find Gold!</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm mx-1 border border-dark text-center">
+                <form action="/process/cave" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="building" value="cave">
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Cave</label>
+                        <p>(earns 5-10 golds)</p>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Find Gold!</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm mx-1 border border-dark text-center">
+                <form action="/process/house" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="building" value="house">
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">House</label>
+                        <p>(earns 2-5 golds)</p>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Find Gold!</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm ml-1 border border-dark text-center">
+                <form action="/process/casino" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="building" value="casino">
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Casino</label>
+                        <p>(earn/lose 50 golds)</p>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Find Gold!</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <h2>Activites:</h2>
+        <div class="border border-dark overflow-auto p-3" style="height: 200px;">
+            {% for activity in request.session.activities reversed %}
+            <p class="mb-1 {{ activity.earned }}">{{ activity.activity }}</p>
+            {% endfor %}
+        </div>
+        <div class="my-2 d-flex justify-content-center">
+            <a class="btn btn-info px-5" href="/reset">Play Again!</a>
+        </div>
+    </div>
+</body>
+</html>
